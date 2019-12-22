@@ -1,0 +1,138 @@
+/* ==================== General ==================== */
+
+body, pre, button {
+    font-family: 'Inconsolata', monospace;
+    font-size: 12pt;
+}
+
+p, pre, ul {
+    margin: 1em 0 0 0;
+}
+
+pre {
+    overflow: hidden;
+}
+
+section {
+    border-radius: 3px;
+    display: none;
+    margin: 2em auto;
+    width: 600px;
+    max-width: 600px;
+    padding: 1em;
+}
+
+a, a:hover, a:active, a:focus,
+button, button:hover, button:active, button:focus, button::-moz-focus-inner {
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    text-decoration: none;
+}
+
+a:hover,
+button:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================== Meta ==================== */
+
+main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main > header {
+    text-align: center;
+}
+
+.copyright {
+    text-align: left;
+}
+
+aside {
+    display: inline-block;
+    float: right;
+}
+
+body.dark aside button.btn-dark {
+    display: none;
+}
+
+body.light aside button.btn-light {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+aside::before,
+header > nav::before {
+    content: '[';
+}
+
+aside::after,
+header > nav::after {
+    content: ']';
+}
+
+header > nav > span:nth-child(n+2)::before {
+    content: '| ';
+    text-decoration: none;
+}
+
+/* section > header:nth-child(1n)::before { */
+/*     content: '// '; */
+/*     white-space: pre; */
+/* } */
+
+/* section > header:nth-child(1n)::after { */
+/*     overflow: hidden; */
+/* } */
+
+/* ==================== List ==================== */
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul ul {
+    margin: 0;
+}
+
+section > ul > li:nth-child(n+2) {
+    margin-top: 1em;
+}
+
+section ul > li::before,
+section p::before {
+    content: '> ';
+}
+
+section ul li {
+
+}
+
+section ul ul li::before {
+    content: '  \\_ ';
+    white-space: pre;
+}
+
+section ul ul ul li::before {
+    content: '     \\_ ';
+    white-space: pre;
+}
