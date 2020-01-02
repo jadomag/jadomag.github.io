@@ -26,8 +26,8 @@ body.dark section > header {
     color: #fabd2f;
 }
 
-body.dark section ul > li::before,
-body.dark section p::before {
+body.dark section p::before,
+body.dark section ul > li::before {
     color: #928374;
 }
 
@@ -59,7 +59,7 @@ body.light section > header {
     color: #d79921;
 }
 
-body.light section ul > li::before,
-body.light section p::before {
+body.light section p::before,
+body.light section ul > li::before {
     color: #928374;
 }
