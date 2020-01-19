@@ -4,10 +4,10 @@ document.querySelectorAll('.years').forEach(function(node) {
 
     let duration = now.getFullYear() - date.getFullYear();
 
-    if (now.getMonth() <= date.getMonth()) {
-        if (now.getDate() < date.getDate()) {
-            duration--;
-        }
+    date.setYear(now.getYear());
+
+    if (date < now) {
+        duration--;
     }
 
     node.textContent = duration;
