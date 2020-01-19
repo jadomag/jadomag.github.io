@@ -5,7 +5,7 @@ body, pre, button {
     font-size: 12pt;
 }
 
-p, pre, ul {
+p, pre, section ul {
     margin: 1em 0 0 0;
 }
 
@@ -26,15 +26,36 @@ a, a:hover, a:active, a:focus,
 button, button:hover, button:active, button:focus, button::-moz-focus-inner {
     border: none;
     cursor: pointer;
-    outline: none !important;
+    outline: none;
     text-decoration: none;
 }
 
+a:focus,
+button:focus {
+    outline: 1px dotted;
+}
+
 a:hover,
+a.active,
 button:hover {
     text-decoration: underline;
 }
 
+/* ==================== Navigation ==================== */
+
+nav ul {
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav li:nth-child(n+2)::before {
+    content: '| ';
+    text-decoration: none;
+}
 
 /* ==================== Meta ==================== */
 
@@ -86,20 +107,6 @@ header > nav::after {
     content: ']';
 }
 
-header > nav > span:nth-child(n+2)::before {
-    content: '| ';
-    text-decoration: none;
-}
-
-/* section > header:nth-child(1n)::before { */
-/*     content: '// '; */
-/*     white-space: pre; */
-/* } */
-
-/* section > header:nth-child(1n)::after { */
-/*     overflow: hidden; */
-/* } */
-
 /* ==================== List ==================== */
 
 ul {
@@ -108,31 +115,30 @@ ul {
 
 ul li {
     list-style: none;
+    overflow-wrap: break-word;
+    word-wrap: normal;
+}
+
+section > ul > li {
+    margin: 0 0 0 1em;
+}
+
+section > ul > li::before {
+    content: '>';
+    left: 1em;
+    position: absolute;
 }
 
 ul ul {
-    margin: 0;
+    margin: 0 0 0 1.5em;
+}
+
+ul ul li::before {
+    content: '\\_';
+    left: 2em;
+    position: absolute;
 }
 
 section > ul > li:nth-child(n+2) {
     margin-top: 1em;
-}
-
-section ul > li::before,
-section p::before {
-    content: '> ';
-}
-
-section ul li {
-
-}
-
-section ul ul li::before {
-    content: '  \\_ ';
-    white-space: pre;
-}
-
-section ul ul ul li::before {
-    content: '     \\_ ';
-    white-space: pre;
 }

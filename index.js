@@ -13,31 +13,34 @@ document.querySelectorAll('.years').forEach(function(node) {
     node.textContent = duration;
 });
 
-document.querySelectorAll('.year').forEach(function(node) {
-    const now = new Date();
-    node.textContent = now.getFullYear();
-});
-
 // ===============
 
 function changeSection() {
     const id = window.location.hash.substr(1) || 'introduction';
 
-    document.querySelectorAll('section').forEach(function(node) {
-        node.style.display = null;
-    });
+    let section = document.getElementById(id);
 
-    document.querySelectorAll('nav.navigation a').forEach(function(node) {
-        node.style.textDecoration = 'none';
-    });
+    if (section && section.nodeName === 'SECTION') {
+        document.querySelectorAll('section').forEach(function(node) {
+            node.style.display = null;
+        });
 
-    document.getElementById(id).style.display = 'block';
-    document.getElementById('nav-' + id).style.textDecoration = 'underline';
+        document.querySelectorAll('header nav a').forEach(function(node) {
+            node.classList.remove('active');
+        });
+
+        section.style.display = 'block';
+        document.getElementById('nav-' + id).classList.add('active');
+    }
 }
 
 // ===============
 
 window.onload = function() {
+    if (!window.location.hash) {
+        window.location = "#introduction";
+    }
+
     changeSection();
     window.addEventListener('hashchange', changeSection);
 };

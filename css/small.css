@@ -7,6 +7,25 @@ main {
     margin-top: 1em;
 }
 
+section > ul > li {
+    margin-left: 8px;
+}
+
+section > ul > li::before {
+    position: relative;
+    left: -0.5em;
+}
+
 section {
     width: auto;
+}
+
+ul ul {
+    margin: 0 0 0 8px;
+}
+
+ul ul li::before {
+    position: relative;
+    left: 0;
+    content: '\\_ ';
 }
