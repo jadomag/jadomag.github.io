@@ -35,9 +35,7 @@ button:focus {
     outline: 1px dotted;
 }
 
-a:hover,
-a.active,
-button:hover {
+a:hover, a.active {
     text-decoration: underline;
 }
 
