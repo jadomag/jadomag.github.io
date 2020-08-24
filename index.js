@@ -10,6 +10,10 @@ document.querySelectorAll('.js-only').forEach(function(node) {
   node.style.display = 'initial'
 })
 
+document.querySelectorAll('.js-alt').forEach(function(node) {
+  node.textContent = node.getAttribute('alt') 
+})
+
 // ===============
 
 function changeSection() {
