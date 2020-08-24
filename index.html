@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/colors.css" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 600px), (max-height: 500px)" href="css/small.css" type="text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap">
         <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
         <script defer type="text/javascript" src="index.js"></script>
     </head>
     <body class="dark">
-        <header>
+        <header class="js-only">
             <aside>
                 <button class="btn-dark" onclick="document.body.className='dark'">Theme</button>
                 <button class="btn-light" onclick="document.body.className='light'">Theme</button>
@@ -22,12 +22,11 @@
 
         <main>
             <header>
-                <nav>
+                <nav class="js-only">
                     <ul>
                         <li><a id="nav-introduction" href="#introduction">Introduction</a></li>
-                        <li><a id="nav-about-me" href="#about-me">About Me</a></li>
+                        <li><a id="nav-about" href="#about">About Me</a></li>
                         <li><a id="nav-social" href="#social">Social</a></li>
-                        <li><a id="nav-stories" href="#stories">Short Stories</a></li>
                     </ul>
                 </nav>
             </header>
@@ -40,52 +39,88 @@
                 </ul>
 
                 <pre>     _            _        __  __
-    | | __ _  ___| | __   |  \/  | __ _  __ _ _ __  _   _ ___ 
+    | | __ _  ___| | __   |  \/  | __ _  __ _ _ __  _   _ ___
  _  | |/ _` |/ __| |/ /   | |\/| |/ _` |/ _` | '_ \| | | / __|
 | |_| | (_| | (__|   &lt;    | |  | | (_| | (_| | | | | |_| \__ \
  \___/ \__,_|\___|_|\_\   |_|  |_|\__,_|\__, |_| |_|\__,_|___/
                                         |___/</pre>
 
                 <ul>
-                    <li>Full-Stack Developer by day.
+                    <li>Full-Stack developer by day.
                         <ul>
-                            <li>Java, HTML, CSS &amp; Javascript</li>
+                            <li>Java, HTML/CSS &amp; Javascript</li>
                         </ul>
                     </li>
 
-                    <li>Indie Game Developer by night.
+                    <li>Independent game developer by night.
                         <ul>
-                            <li>Rust, OpenGL 3.3 &amp; Lua</li>
+                            <li>Rust &amp; Vulkan</li>
                         </ul>
                     </li>
                 </ul>
             </section>
 
-            <section id="about-me">
+            <section id="about">
                 <header>// About Me</header>
-
+                <br>
+                <span class="comment">// Q&amp;A style overview of me and what I like.</span>
                 <ul>
-                    <li>Born <span class="years" data-date="1994-08-16">?</span> years ago in Germany.</li>
-                    <li>One half of Onimomino, an independent team making games.
+                    <li>What's your age and where are you from?
                         <ul>
-                            <li>Be sure to check out my <a href="http://hapsam.com" target="_blank">partner in crime</a>, for art, music, and more!</li>
+                            <li><span class="js-only">I'm</span> <span class="years" data-date="1994-08-16">I was born at 1994-08-16</span> <span class="js-only">and was raised</span> in Rüdesheim am Rhein, Germany.</li>
                         </ul>
                     </li>
-                    <li>Severely in love with <a href="https://www.vim.org" target="_blank">Vim</a>, and its great fork, <a href="https://neovim.io/" target="_blank">Neovim</a>.</li>
-                    <li>Enthusiastic user of <a href="http://manjaro.org" target="_blank">Manjaro</a> and <a href="http://i3wm.org" target="_blank">i3wm</a>.</li>
-                    <li>Possibly absorbed in unusual books if left alone.
+
+                    <li>How long have you been programming?
                         <ul>
-                            <li>Weird Fiction</li>
-                            <li>Gothic Fiction</li>
-                            <li>Dark Fantasy</li>
+                            <li>I started around 11 with Actionscript 2.0, but only took it more serious at seventeen while hacking with C on an <a href="https://en.wikipedia.org/wiki/AVR_microcontrollers" target="_blank">ATmega8 and ATmega328</a>.</li>
                         </ul>
                     </li>
-                    <li>Semi-secret member of the crochet and knitting club(s).</li>
-                    <li>Avid consumer of tea.
+
+                    <li>Aside your day job, what do you work on?
                         <ul>
-                            <li>Green</li>
-                            <li>Chamomile</li>
-                            <li>Mint</li>
+                            <li>I'm one half of <a href="http://inomino.io"</a>inomino</a>, an independent team developing games.</li>
+                        </ul>
+                    </li>
+
+                    <li>What languages do you know?
+                        <ul>
+                            <li>Rust, Java, Kotlin, Javascript, HTML/CSS, Lua, C, Python, Haxe,...</li>
+                        </ul>
+                    </li>
+
+                    <li>What OS do you use?
+                        <ul>
+                            <li><a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> with <a href="http://i3wm.org" target="_blank">i3wm</a>.</li>
+                        </ul>
+                    </li>
+
+                    <li>What editor do you use?
+                        <ul>
+                            <li><a href="https://neovim.io/" target="_blank">Neovim</a>, <a href="https://www.vim.org" target="_blank">Vim</a>'s great fork, at home and work.</li>
+                            <li><a href="https://www.jetbrains.com/idea/" target"_blank">IntelliJ IDEA</a> at work, for Java and the like.</li>
+
+                        </ul>
+                    </li>
+
+                    <li>Tea or coffee?
+                        <ul>
+                            <li>Green tea or medium-dark roast coffee. Both are great, but I like tea more.</li>
+                        </ul>
+                    </li>
+
+                    <li>Any book recommendations?
+                        <ul>
+                            <li>Nonfiction: <a href="https://www.goodreads.com/book/show/39996759-a-philosophy-of-software-design" target"_blank">A Philosophy of Software Design</a> and <a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things" target="_blank">The Design of Everyday Things</a>.</li>
+                            <li>Fiction: <a href="https://en.wikipedia.org/wiki/The_Physician" target="_blank">The Phyician</a>, <a href="https://en.wikipedia.org/wiki/The_Witcher" target="_blank">Witcher Series</a> and <a href="https://en.wikipedia.org/wiki/We_Have_Always_Lived_in_the_Castle" target="_blank">We Have Always Lived in the Castle</a>.</li>
+                        </ul>
+                    </li>
+
+                    <li>What else do you do?
+                        <ul>
+                            <li>Creative writing.</li>
+                            <li>Crochet and knitting.</li>
+                            <li>Drawing and 3D modelling.</li>
                         </ul>
                     </li>
                 </ul>
@@ -93,20 +128,43 @@
 
             <section id="social">
                 <header>// Social</header>
+                <br>
+                <span class="comment">// Collection of links and social media accounts.</span>
                 <ul>
-                    <li>Email: <a href="mailto:jack.magnus@jadomag.com">jack.magnus@jadomag.com</a></li>
-                    <li>Github: <a href="http://github.com/jadomag" target="_blank">jadomag</a></li>
+                    <li>Email: <script type="text/javascript" language="javascript">
+<!--
+// Email obfuscator script 2.1 by Tim Williams, University of Arizona
+// Random encryption key feature coded by Andrew Moulden
+// This code is freeware provided these four comment lines remain intact
+// A wizard to generate this code is at http://www.jottings.com/obfuscator/
+{ coded = "hkgB.PkRXQe@hkwIPkR.gIP"
+  key = "UO2uoPNTnJhbAyCKg5BFeD4GldQIHW9Xqvatr06RExzim3f1wj8MLYScZkVs7p"
+  shift=coded.length
+  link=""
+  for (i=0; i<coded.length; i++) {
+    if (key.indexOf(coded.charAt(i))==-1) {
+      ltr = coded.charAt(i)
+      link += (ltr)
+    }
+    else {
+      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+      link += (key.charAt(ltr))
+    }
+  }
+document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+}
+//-->
+</script><noscript>Sorry, (due to bots) you need Javascript to email me.</noscript>
+                    </li>
+                    <li>Github: <a href="http://github.com/jadomag" target="_blank">jadomag</a>
+                        <ul>
+                            <li><a href="https://github.com/jadomag/dots" target="_blank">dots</a> (dotfiles)</li>
+                            <li><a href="https://github.com/jadomag/jadomag.github.io" target="_blank">jadomag.github.io</a> (website)</li>
+                        </ul>
+                    </li>
                     <li>Hackernews: <a href="http://news.ycombinator.com/user?id=jadomag" target="_blank">jadomag</a></li>
                     <li>Reddit: <a href="http://www.reddit.com/user/jadomag" target="_blank">/u/jadomag</a></li>
                     <li>Twitter: <a href="http://twitter.com/jadomag" target="_blank">@jadomag</a></li>
-                </ul>
-            </section>
-
-            <section id="stories">
-                <header>// Short Stories</header>
-
-                <ul>
-                    <li>Sorry, there's nothing to read yet.</li>
                 </ul>
             </section>
         </main>

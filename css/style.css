@@ -15,10 +15,9 @@ pre {
 
 section {
     border-radius: 3px;
-    display: none;
     margin: 2em auto;
-    width: 600px;
-    max-width: 600px;
+    width: 700px;
+    max-width: 700px;
     padding: 1em;
 }
 
@@ -37,6 +36,10 @@ button:focus {
 
 a:hover, a.active {
     text-decoration: underline;
+}
+
+.js-only {
+  display: none;
 }
 
 /* ==================== Navigation ==================== */
