@@ -98,12 +98,10 @@ button {
     padding: 0;
 }
 
-aside::before,
 header > nav::before {
     content: '[';
 }
 
-aside::after,
 header > nav::after {
     content: ']';
 }
